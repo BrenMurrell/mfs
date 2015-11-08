@@ -1,0 +1,672 @@
+/* line 4, ../sass/01-atoms/_typography.scss */
+h1, h2 {
+  font-family: 'Ropa Sans', sans-serif;
+}
+
+/* line 1, ../sass/02-elements/_nav.scss */
+.nav--main {
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  padding: 0 0 0 20px;
+  box-sizing: border-box;
+}
+/* line 10, ../sass/02-elements/_nav.scss */
+.admin-bar .nav--main {
+  top: 32px;
+}
+/* line 13, ../sass/02-elements/_nav.scss */
+.nav--main a {
+  color: #fff;
+  text-decoration: none;
+}
+/* line 16, ../sass/02-elements/_nav.scss */
+.nav--main a:hover {
+  color: #f15a29;
+}
+/* line 20, ../sass/02-elements/_nav.scss */
+.nav--main .fa {
+  float: right;
+  padding: 10px;
+  font-size: 40px;
+}
+/* line 25, ../sass/02-elements/_nav.scss */
+.nav--main h1, .nav--main h2 {
+  float: left;
+  color: #fff;
+  margin: 0;
+  line-height: 56px;
+}
+/* line 31, ../sass/02-elements/_nav.scss */
+.nav--main h2 {
+  text-transform: uppercase;
+}
+/* line 34, ../sass/02-elements/_nav.scss */
+.nav--main ul {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  list-style-type: none;
+  padding: 20px 40px 0 0;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform: rotate3d(1, 0, 0, 90deg);
+  -ms-transform: rotate3d(1, 0, 0, 90deg);
+  -webkit-transform: rotate3d(1, 0, 0, 90deg);
+  transform: rotate3d(1, 0, 0, 90deg);
+}
+/* line 44, ../sass/02-elements/_nav.scss */
+.nav--main ul.open {
+  -moz-transform: rotate3d(1, 0, 0, 0deg);
+  -ms-transform: rotate3d(1, 0, 0, 0deg);
+  -webkit-transform: rotate3d(1, 0, 0, 0deg);
+  transform: rotate3d(1, 0, 0, 0deg);
+}
+/* line 48, ../sass/02-elements/_nav.scss */
+.nav--main ul:before {
+  border-top: 220px solid rgba(255, 185, 99, 0.6);
+  border-right: 220px solid rgba(255, 185, 99, 0.6);
+  border-bottom: 220px solid transparent;
+  border-left: 220px solid transparent;
+  content: ' ';
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* line 59, ../sass/02-elements/_nav.scss */
+.nav--main li {
+  font-family: "Ropa Sans", sans-serif;
+  text-transform: uppercase;
+  text-align: right;
+  font-size: 2em;
+  font-weight: 400;
+  position: relative;
+  line-height: 1.8em;
+}
+/* line 68, ../sass/02-elements/_nav.scss */
+.nav--main li.current_page_item a, .nav--main li.current_page_parent a, .nav--main li.current_page_ancestor a {
+  color: #f15a29;
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--left--10 {
+  border-right: 10px solid orange;
+  border-left: none;
+  border-top: 10px solid transparent !important;
+  border-bottom: 10px solid transparent !important;
+  border-width: 10px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--right--10 {
+  border-right: none;
+  border-left: 10px solid orange;
+  border-top: 10px solid transparent !important;
+  border-bottom: 10px solid transparent !important;
+  border-width: 10px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--up--10 {
+  border-right: 10px solid transparent !important;
+  border-left: 10px solid transparent !important;
+  border-bottom: 10px solid orange;
+  border-top: none;
+  border-width: 10px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--down--10 {
+  border-right: 10px solid transparent !important;
+  border-left: 10px solid transparent !important;
+  border-top: 10px solid orange;
+  border-bottom: none;
+  border-width: 10px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--left--20 {
+  border-right: 20px solid orange;
+  border-left: none;
+  border-top: 20px solid transparent !important;
+  border-bottom: 20px solid transparent !important;
+  border-width: 20px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--right--20 {
+  border-right: none;
+  border-left: 20px solid orange;
+  border-top: 20px solid transparent !important;
+  border-bottom: 20px solid transparent !important;
+  border-width: 20px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--up--20 {
+  border-right: 20px solid transparent !important;
+  border-left: 20px solid transparent !important;
+  border-bottom: 20px solid orange;
+  border-top: none;
+  border-width: 20px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--down--20 {
+  border-right: 20px solid transparent !important;
+  border-left: 20px solid transparent !important;
+  border-top: 20px solid orange;
+  border-bottom: none;
+  border-width: 20px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--left--30 {
+  border-right: 30px solid orange;
+  border-left: none;
+  border-top: 30px solid transparent !important;
+  border-bottom: 30px solid transparent !important;
+  border-width: 30px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--right--30 {
+  border-right: none;
+  border-left: 30px solid orange;
+  border-top: 30px solid transparent !important;
+  border-bottom: 30px solid transparent !important;
+  border-width: 30px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--up--30 {
+  border-right: 30px solid transparent !important;
+  border-left: 30px solid transparent !important;
+  border-bottom: 30px solid orange;
+  border-top: none;
+  border-width: 30px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--down--30 {
+  border-right: 30px solid transparent !important;
+  border-left: 30px solid transparent !important;
+  border-top: 30px solid orange;
+  border-bottom: none;
+  border-width: 30px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--left--40 {
+  border-right: 40px solid orange;
+  border-left: none;
+  border-top: 40px solid transparent !important;
+  border-bottom: 40px solid transparent !important;
+  border-width: 40px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--right--40 {
+  border-right: none;
+  border-left: 40px solid orange;
+  border-top: 40px solid transparent !important;
+  border-bottom: 40px solid transparent !important;
+  border-width: 40px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--up--40 {
+  border-right: 40px solid transparent !important;
+  border-left: 40px solid transparent !important;
+  border-bottom: 40px solid orange;
+  border-top: none;
+  border-width: 40px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--down--40 {
+  border-right: 40px solid transparent !important;
+  border-left: 40px solid transparent !important;
+  border-top: 40px solid orange;
+  border-bottom: none;
+  border-width: 40px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--left--50 {
+  border-right: 50px solid orange;
+  border-left: none;
+  border-top: 50px solid transparent !important;
+  border-bottom: 50px solid transparent !important;
+  border-width: 50px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--right--50 {
+  border-right: none;
+  border-left: 50px solid orange;
+  border-top: 50px solid transparent !important;
+  border-bottom: 50px solid transparent !important;
+  border-width: 50px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--up--50 {
+  border-right: 50px solid transparent !important;
+  border-left: 50px solid transparent !important;
+  border-bottom: 50px solid orange;
+  border-top: none;
+  border-width: 50px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--down--50 {
+  border-right: 50px solid transparent !important;
+  border-left: 50px solid transparent !important;
+  border-top: 50px solid orange;
+  border-bottom: none;
+  border-width: 50px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--left--60 {
+  border-right: 60px solid orange;
+  border-left: none;
+  border-top: 60px solid transparent !important;
+  border-bottom: 60px solid transparent !important;
+  border-width: 60px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--right--60 {
+  border-right: none;
+  border-left: 60px solid orange;
+  border-top: 60px solid transparent !important;
+  border-bottom: 60px solid transparent !important;
+  border-width: 60px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--up--60 {
+  border-right: 60px solid transparent !important;
+  border-left: 60px solid transparent !important;
+  border-bottom: 60px solid orange;
+  border-top: none;
+  border-width: 60px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--down--60 {
+  border-right: 60px solid transparent !important;
+  border-left: 60px solid transparent !important;
+  border-top: 60px solid orange;
+  border-bottom: none;
+  border-width: 60px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--left--70 {
+  border-right: 70px solid orange;
+  border-left: none;
+  border-top: 70px solid transparent !important;
+  border-bottom: 70px solid transparent !important;
+  border-width: 70px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--right--70 {
+  border-right: none;
+  border-left: 70px solid orange;
+  border-top: 70px solid transparent !important;
+  border-bottom: 70px solid transparent !important;
+  border-width: 70px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--up--70 {
+  border-right: 70px solid transparent !important;
+  border-left: 70px solid transparent !important;
+  border-bottom: 70px solid orange;
+  border-top: none;
+  border-width: 70px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--down--70 {
+  border-right: 70px solid transparent !important;
+  border-left: 70px solid transparent !important;
+  border-top: 70px solid orange;
+  border-bottom: none;
+  border-width: 70px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--left--80 {
+  border-right: 80px solid orange;
+  border-left: none;
+  border-top: 80px solid transparent !important;
+  border-bottom: 80px solid transparent !important;
+  border-width: 80px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--right--80 {
+  border-right: none;
+  border-left: 80px solid orange;
+  border-top: 80px solid transparent !important;
+  border-bottom: 80px solid transparent !important;
+  border-width: 80px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--up--80 {
+  border-right: 80px solid transparent !important;
+  border-left: 80px solid transparent !important;
+  border-bottom: 80px solid orange;
+  border-top: none;
+  border-width: 80px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--down--80 {
+  border-right: 80px solid transparent !important;
+  border-left: 80px solid transparent !important;
+  border-top: 80px solid orange;
+  border-bottom: none;
+  border-width: 80px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--left--90 {
+  border-right: 90px solid orange;
+  border-left: none;
+  border-top: 90px solid transparent !important;
+  border-bottom: 90px solid transparent !important;
+  border-width: 90px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--right--90 {
+  border-right: none;
+  border-left: 90px solid orange;
+  border-top: 90px solid transparent !important;
+  border-bottom: 90px solid transparent !important;
+  border-width: 90px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--up--90 {
+  border-right: 90px solid transparent !important;
+  border-left: 90px solid transparent !important;
+  border-bottom: 90px solid orange;
+  border-top: none;
+  border-width: 90px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--down--90 {
+  border-right: 90px solid transparent !important;
+  border-left: 90px solid transparent !important;
+  border-top: 90px solid orange;
+  border-bottom: none;
+  border-width: 90px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--left--100 {
+  border-right: 100px solid orange;
+  border-left: none;
+  border-top: 100px solid transparent !important;
+  border-bottom: 100px solid transparent !important;
+  border-width: 100px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--right--100 {
+  border-right: none;
+  border-left: 100px solid orange;
+  border-top: 100px solid transparent !important;
+  border-bottom: 100px solid transparent !important;
+  border-width: 100px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--up--100 {
+  border-right: 100px solid transparent !important;
+  border-left: 100px solid transparent !important;
+  border-bottom: 100px solid orange;
+  border-top: none;
+  border-width: 100px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 41, ../sass/02-elements/_triangles.scss */
+.tri--down--100 {
+  border-right: 100px solid transparent !important;
+  border-left: 100px solid transparent !important;
+  border-top: 100px solid orange;
+  border-bottom: none;
+  border-width: 100px;
+  height: 0;
+  width: 0;
+  display: block;
+  content: ' ';
+}
+
+/* line 46, ../sass/02-elements/_triangles.scss */
+.triangles {
+  position: fixed;
+  left: 0;
+  top: 0px;
+}
+/* line 50, ../sass/02-elements/_triangles.scss */
+.admin-bar .triangles {
+  top: 32px;
+}
+
+/* line 54, ../sass/02-elements/_triangles.scss */
+.tri--red {
+  border-color: red;
+}
+
+/* line 1, ../sass/03-templates/_index.scss */
+.fi {
+  background-position: center center;
+  background-size: cover;
+  height: 350px;
+  width: 100%;
+}
+
+/* line 7, ../sass/03-templates/_index.scss */
+.fi--zoom {
+  height: 175px;
+}
+
+/* line 11, ../sass/03-templates/_index.scss */
+.excerpt {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* line 1, ../sass/04-layout/_grid.scss */
+.pure-g {
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0 auto;
+  background: white;
+}
+
+/* line 1, ../sass/04-layout/_content.scss */
+.content {
+  max-width: 984px;
+  margin: 56px auto 0;
+}

@@ -1,0 +1,56 @@
+
+@mixin triangle($direction: right, $size: 20px, $color: orange ) {
+
+        @if $direction == down {
+            border-right: $size solid transparent !important;
+            border-left: $size solid transparent !important;
+            border-top: $size solid $color;
+            border-bottom: none;
+        }
+        @if $direction == up {
+            border-right: $size solid transparent !important;
+            border-left: $size solid transparent !important;
+            border-bottom: $size solid $color;
+            border-top: none;
+        }
+        @if $direction == right {
+            border-right: none;
+            border-left: $size solid $color;
+            border-top: $size solid transparent !important;
+            border-bottom: $size solid transparent !important;
+        }
+        @if $direction == left {
+            border-right: $size solid $color;
+            border-left: none;
+            border-top: $size solid transparent !important;
+            border-bottom: $size solid transparent !important;
+        }
+        border-width: $size;
+        height: 0;
+        width: 0;
+        display: block;
+        content: ' ';
+
+
+}
+
+
+$class-slug: tri !default;
+@for $i from 1 through 10 {
+    @each $direction in (left, right, up, down) {
+        .#{$class-slug}--#{$direction}--#{($i * 10)} {
+            @include triangle($direction, ($i*10) + px);
+        }
+    }
+}
+.triangles {
+    position: fixed;
+    left: 0;
+    top: 0px;
+    .admin-bar & {
+        top: 32px;
+    }
+}
+.tri--red {
+    border-color: red;
+}

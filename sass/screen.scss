@@ -1,13 +1,15 @@
-@import 'compass/css3/transform';
+@import "compass/css3/filter";
+@import "compass/css3/transform";
 @import "compass/css3/transition";
 
+@import "01-atoms/links";
 @import "01-atoms/typography";
 @import "01-atoms/variables";
 
 @import "02-elements/nav";
 @import "02-elements/triangles";
 
-@import "03-templates/index";
+@import "03-templates/archive";
 
 @import "04-layout/grid";
 @import "04-layout/content";

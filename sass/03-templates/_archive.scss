@@ -1,0 +1,28 @@
+.fi {
+    background-position: center center;
+    background-size: cover;
+    height: 428px;
+    width: 100%;
+}
+.fi--zoom {
+    height: 214px;
+    @include filter(grayscale(100%));
+    @include transition-property(all);
+    @include transition-duration(0.4s);
+    a:hover & {
+        -webkit-filter: grayscale(0%);
+    }
+}
+
+.excerpt {
+    padding: 20px; box-sizing: border-box;
+    h2 {
+        color: $col-headings;
+    }
+    p {
+        color: $col-headings;
+    }
+}
+.archive-block {
+    background: $col-mid-grey;
+}

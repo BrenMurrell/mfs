@@ -1,4 +1,9 @@
 .content {
-    max-width: 984px;
+    max-width: $dim-max-width;
     margin:56px auto 0;
+}
+.isBlock {
+    display: block;
+    max-width: $dim-max-width;
+    margin: 0 auto;
 }

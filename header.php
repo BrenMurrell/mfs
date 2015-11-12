@@ -33,9 +33,10 @@
 			<?php wp_list_pages('title_li='); ?>
 		</ul>
 	</nav>
-    <div class="pure-g headline">
+    <!-- <div class="pure-g headline">
         <div class="pure-u-1-1">
 
         </div>
-    </div>
+    </div> -->
+	<div class="wrapper">
 	<?php get_template_part('triangles'); ?>

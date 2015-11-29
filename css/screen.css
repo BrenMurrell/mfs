@@ -651,7 +651,7 @@ h1, h2 {
   width: 100%;
 }
 
-/* line 7, ../sass/03-templates/_archive.scss */
+/* line 11, ../sass/03-templates/_archive.scss */
 .fi--zoom {
   height: 214px;
   -webkit-filter: grayscale(100%);
@@ -665,33 +665,34 @@ h1, h2 {
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
 }
-/* line 12, ../sass/03-templates/_archive.scss */
-a:hover .fi--zoom {
+/* line 16, ../sass/03-templates/_archive.scss */
+.archive-block .pure-u-md-1-3:hover .fi--zoom {
   -webkit-filter: grayscale(0%);
 }
 
-/* line 17, ../sass/03-templates/_archive.scss */
+/* line 21, ../sass/03-templates/_archive.scss */
 .excerpt {
   padding: 20px;
   box-sizing: border-box;
 }
-/* line 19, ../sass/03-templates/_archive.scss */
+/* line 23, ../sass/03-templates/_archive.scss */
 .excerpt h2 {
   color: #231F20;
 }
-/* line 22, ../sass/03-templates/_archive.scss */
+/* line 26, ../sass/03-templates/_archive.scss */
 .excerpt p {
   color: #231F20;
+  font-family: "Ropa Sans", sans-serif;
 }
 
-/* line 26, ../sass/03-templates/_archive.scss */
+/* line 31, ../sass/03-templates/_archive.scss */
 .archive-block {
   background: #808285;
 }
 
 /* line 1, ../sass/04-layout/_grid.scss */
 .wrapper {
-  margin: 20px 5px;
+  margin: 80px 5px;
 }
 
 /* line 4, ../sass/04-layout/_grid.scss */

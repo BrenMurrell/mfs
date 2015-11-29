@@ -3,13 +3,17 @@
     background-size: cover;
     height: 428px;
     width: 100%;
+    //display: none;
+    //@include respond(md) {
+    //    display: block;
+    //}
 }
 .fi--zoom {
     height: 214px;
     @include filter(grayscale(100%));
     @include transition-property(all);
     @include transition-duration(0.4s);
-    a:hover & {
+    .archive-block .pure-u-md-1-3:hover & {
         -webkit-filter: grayscale(0%);
     }
 }
@@ -21,6 +25,7 @@
     }
     p {
         color: $col-headings;
+        font-family: $font-sans;
     }
 }
 .archive-block {

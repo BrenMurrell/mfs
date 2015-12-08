@@ -1,5 +1,5 @@
 
-@mixin triangle($direction: right, $size: 20px, $color: orange ) {
+@mixin triangle($direction: right, $size: 20px, $color: #e36b2d ) {
 
         @if $direction == down {
             border-right: $size solid transparent !important;
@@ -45,12 +45,64 @@ $class-slug: tri !default;
 }
 .triangles {
     position: fixed;
-    left: 0;
-    top: 0px;
+    z-index: 20;
+    display: none;
     .admin-bar & {
         top: 32px;
     }
+    @include respond(md) {
+        display: block;
+    }
+}
+.triangles--topleft {
+    left: 0;
+    top: 0px;
 }
 .tri--red {
     border-color: red;
+}
+.tri--grey3 {
+    border-color: #383838;
+}
+.tri--grey5 {
+    border-color: #58585b;
+}
+.triangles--topleft > div {
+    position: absolute;
+    bottom: 0;
+}
+.ttl-01 {
+    top: 0;
+    left: 5px;
+    @include transition-delay(0.4s);
+}
+.ttl-02 {
+    left: 0;
+    top: 5px;
+    border-color: #3b3b3b;
+}
+.ttl-03 {
+    left: 50px;
+    top: 5px;
+}
+.ttl-04 {
+    left: 90px;
+    top: 5px;
+}
+.ttl-05 {
+    left: 45px;
+    top: 50px;
+    border-color: #5b5b5b;
+}
+.ttl-06 {
+    left: 0;
+    top: 95px;
+}
+.ttl-07 {
+    left: 0;
+    top: 145px;
+}
+.ttl-08 {
+    left: 0;
+    top: 195px;
 }

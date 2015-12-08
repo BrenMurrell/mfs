@@ -1,7 +1,21 @@
 * {
-    //font-family: 'Josefin Slab', serif;
-}
-h1, h2 {
-    font-family: 'Ropa Sans', sans-serif;
+    //font-family:
 }
 $font-sans: 'Ropa Sans', sans-serif;
+$font-serif: 'Josefin Slab', serif;
+h1, h2, h3, h4 {
+    font-family: 'Ropa Sans', sans-serif;
+
+}
+
+h3 {
+    font-size: 1.6em;
+}
+h4 {
+    line-height: 1.4em;
+}
+p {
+    font-family: $font-serif;
+    font-size: 1.2em;
+    line-height: 1.4em;
+}

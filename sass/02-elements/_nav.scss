@@ -8,6 +8,20 @@
     padding: 0 0 0 20px;
     box-sizing: border-box;
     z-index: 1;
+    @include respond(md) {
+        padding-left: 76px;
+        &:before {
+            display: block;
+            content: ' ';
+            width: 56px;
+            height: 56px;
+            position: absolute;
+            left: 0;
+            background: white;
+        }
+    }
+
+
     .admin-bar & {
         top: 32px;
     }

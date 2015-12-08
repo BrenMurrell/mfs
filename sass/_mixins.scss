@@ -1,0 +1,92 @@
+//  Responsive layout mixin
+
+$screen-xs: 20em;
+$screen-sm: 35.5em;
+$screen-md: 48em;
+$screen-lg: 64em;
+$screen-xl: 80em;
+$screen-xxl: 87.5em;
+$screen-full: 100em;
+
+@mixin respond($media) {
+  @if $media == xs {
+    @media only screen and (min-width: $screen-xs) { @content; }
+  }
+  @else if $media == sm {
+    @media only screen and (min-width: $screen-sm) { @content; }
+  }
+  @else if $media == md {
+    @media only screen and (min-width: $screen-md) { @content; }
+  }
+  @else if $media == lg {
+    @media only screen and (min-width: $screen-lg) { @content; }
+  }
+  @else if $media == xl {
+    @media only screen and (min-width: $screen-xl) { @content; }
+  }
+  @else if $media == xxl {
+    @media only screen and (min-width: $screen-xxl) { @content; }
+  }
+  @else if $media == full {
+    @media only screen and (min-width: $screen-full) { @content; }
+  }
+}
+
+
+@mixin respondmf($media) {
+  @if $media == xs {
+    @media only screen and (max-width: $screen-xs) { @content; }
+  }
+  @else if $media == sm {
+    @media only screen and (max-width: $screen-sm) { @content; }
+  }
+  @else if $media == md {
+    @media only screen and (max-width: $screen-md) { @content; }
+  }
+  @else if $media == lg {
+    @media only screen and (max-width: $screen-lg) { @content; }
+  }
+  @else if $media == xl {
+    @media only screen and (max-width: $screen-xl) { @content; }
+  }
+  @else if $media == xxl {
+    @media only screen and (max-width: $screen-xxl) { @content; }
+  }
+  @else if $media == full {
+    @media only screen and (max-width: $screen-full) { @content; }
+  }
+}
+
+
+
+// vertical align mixin
+@mixin vertical-align {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// simple mobile/desktop show/hide - formatted as extendable classes
+%mobile {
+    display: block;
+    @include respond(md) {
+        display: none;
+    }
+}
+%desktop {
+    display: none;
+    @include respond(md) {
+        display: block;
+    }
+}
+
+@mixin clearfix() {
+    overflow: hidden;
+}
+//button color mixin
+@mixin button-color($bc-color) {
+    background-color: $bc-color;
+    &:hover {
+        background-color: darken($bc-color,10%);
+    }
+}

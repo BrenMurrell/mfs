@@ -21,9 +21,17 @@
                     <div class="fi fi--zoom" style=" background-image: url('<?php echo $url_sm; ?>');">
                     </div>
                     <div class="excerpt">
-                        <h2><?php the_date('l jS'); ?> - <?php the_title(); ?></h2>
-                        <?php the_excerpt(); ?>
+                        <?php $location = get_post_meta($post->ID,'post-location',true); ?>
+                        <h2><?php the_time('D, jS F'); ?> - <?php the_title(); ?> <?php if($location) echo ' - ' . $location; ?></h2>
+                        <?php //the_excerpt(); ?>
+                        <p><?php mog_long_excerpt(140); ?>...</p>
 
+
+                        <?php //echo (get_post_meta($post->ID,'locations',true)); ?>
+                        <?php /* $related = $pod->field( 'location' ); ?>
+                        <?php foreach($related as $rel) {
+                            echo $rel['ID'];
+                        } */ ?>
                     </div>
 
 

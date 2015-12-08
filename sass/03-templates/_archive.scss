@@ -10,22 +10,31 @@
 }
 .fi--zoom {
     height: 214px;
+    display: none;
     @include filter(grayscale(100%));
     @include transition-property(all);
     @include transition-duration(0.4s);
     .archive-block .pure-u-md-1-3:hover & {
         -webkit-filter: grayscale(0%);
     }
+    @include respond(md) {
+        display: block;
+    }
 }
 
 .excerpt {
-    padding: 20px; box-sizing: border-box;
+    padding: 20px;
+    box-sizing: border-box;
+    max-height: 213px;
+    overflow: hidden;
     h2 {
         color: $col-headings;
+        margin:0;
     }
     p {
         color: $col-headings;
         font-family: $font-sans;
+        font-size: 18px;
     }
 }
 .archive-block {

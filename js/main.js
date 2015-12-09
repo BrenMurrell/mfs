@@ -4,4 +4,8 @@ $(function () {
         //alert('boom');
         $(this).siblings('ul').toggleClass('open');
     })
+    $('.hero').height(innerHeight - 96);
+});
+$(window).load(function() {
+    $('body').addClass('loaded');
 });

@@ -9,11 +9,11 @@
     box-sizing: border-box;
     z-index: 1;
     @include respond(md) {
-        padding-left: 76px;
+        padding-left: 136px;
         &:before {
             display: block;
             content: ' ';
-            width: 56px;
+            width: 90px;
             height: 56px;
             position: absolute;
             left: 0;
@@ -85,4 +85,13 @@
             }
         }
     }
+}
+.navigation {
+    overflow: hidden;
+}
+.newer {
+    float :right;
+}
+.older {
+    float :left;
 }

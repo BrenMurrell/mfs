@@ -24,8 +24,7 @@
 
 .excerpt {
     padding: 20px;
-    box-sizing: border-box;
-    max-height: 213px;
+    box-sizing: border-box;    
     overflow: hidden;
     h2 {
         color: $col-headings;
@@ -36,7 +35,11 @@
         font-family: $font-sans;
         font-size: 18px;
     }
+    @include respond(md) {
+        max-height: 213px;
+    }
 }
-.archive-block {
+.content .archive-block {
     background: $col-mid-grey;
+    margin-bottom: 40px;
 }

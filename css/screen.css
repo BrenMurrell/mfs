@@ -25,6 +25,46 @@ p {
   line-height: 1.4em;
 }
 
+/* line 1, ../sass/02-elements/_hero.scss */
+.hero {
+  display: block;
+  width: 100%;
+  height: 900px;
+  background-size: cover;
+  background-position: center center;
+  padding: 40px;
+  box-sizing: border-box;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+/* line 12, ../sass/02-elements/_hero.scss */
+.hero h1 a {
+  color: #fff;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 48em) {
+  /* line 1, ../sass/02-elements/_hero.scss */
+  .hero {
+    padding: 40px 0 0 136px;
+  }
+}
+
+/* line 20, ../sass/02-elements/_hero.scss */
+.overlay {
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 28, ../sass/02-elements/_hero.scss */
+.hero-content {
+  position: relative;
+}
+
 /* line 1, ../sass/02-elements/_nav.scss */
 .nav--main {
   background: black;
@@ -40,13 +80,13 @@ p {
 @media only screen and (min-width: 48em) {
   /* line 1, ../sass/02-elements/_nav.scss */
   .nav--main {
-    padding-left: 76px;
+    padding-left: 136px;
   }
   /* line 13, ../sass/02-elements/_nav.scss */
   .nav--main:before {
     display: block;
     content: ' ';
-    width: 56px;
+    width: 90px;
     height: 56px;
     position: absolute;
     left: 0;
@@ -140,622 +180,1589 @@ p {
   color: #f15a29;
 }
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 89, ../sass/02-elements/_nav.scss */
+.navigation {
+  overflow: hidden;
+}
+
+/* line 92, ../sass/02-elements/_nav.scss */
+.newer {
+  float: right;
+}
+
+/* line 95, ../sass/02-elements/_nav.scss */
+.older {
+  float: left;
+}
+
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--left--10 {
   border-right: 10px solid #e36b2d;
   border-left: none;
   border-top: 10px solid transparent !important;
   border-bottom: 10px solid transparent !important;
+  -moz-transform: rotate3d(0, 1, 0, -90deg);
+  -ms-transform: rotate3d(0, 1, 0, -90deg);
+  -webkit-transform: rotate3d(0, 1, 0, -90deg);
+  transform: rotate3d(0, 1, 0, -90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 40px 0;
+  -ms-transform-origin: 40px 0;
+  -webkit-transform-origin: 40px 0;
+  transform-origin: 40px 0;
   border-width: 10px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 53, ../sass/02-elements/_triangles.scss */
+.loaded .tri--left--10 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--right--10 {
   border-right: none;
   border-left: 10px solid #e36b2d;
   border-top: 10px solid transparent !important;
   border-bottom: 10px solid transparent !important;
+  -moz-transform: rotate3d(0, 1, 0, 90deg);
+  -ms-transform: rotate3d(0, 1, 0, 90deg);
+  -webkit-transform: rotate3d(0, 1, 0, 90deg);
+  transform: rotate3d(0, 1, 0, 90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 10px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 39, ../sass/02-elements/_triangles.scss */
+.loaded .tri--right--10 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--up--10 {
   border-right: 10px solid transparent !important;
   border-left: 10px solid transparent !important;
   border-bottom: 10px solid #e36b2d;
   border-top: none;
+  -moz-transform: rotate3d(1, 0, 0, -90deg);
+  -ms-transform: rotate3d(1, 0, 0, -90deg);
+  -webkit-transform: rotate3d(1, 0, 0, -90deg);
+  transform: rotate3d(1, 0, 0, -90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 10px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 26, ../sass/02-elements/_triangles.scss */
+.loaded .tri--up--10 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--down--10 {
   border-right: 10px solid transparent !important;
   border-left: 10px solid transparent !important;
   border-top: 10px solid #e36b2d;
   border-bottom: none;
+  -moz-transform: rotate3d(1, 0, 0, 90deg);
+  -ms-transform: rotate3d(1, 0, 0, 90deg);
+  -webkit-transform: rotate3d(1, 0, 0, 90deg);
+  transform: rotate3d(1, 0, 0, 90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 10px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 13, ../sass/02-elements/_triangles.scss */
+.loaded .tri--down--10 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--left--20 {
   border-right: 20px solid #e36b2d;
   border-left: none;
   border-top: 20px solid transparent !important;
   border-bottom: 20px solid transparent !important;
+  -moz-transform: rotate3d(0, 1, 0, -90deg);
+  -ms-transform: rotate3d(0, 1, 0, -90deg);
+  -webkit-transform: rotate3d(0, 1, 0, -90deg);
+  transform: rotate3d(0, 1, 0, -90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 40px 0;
+  -ms-transform-origin: 40px 0;
+  -webkit-transform-origin: 40px 0;
+  transform-origin: 40px 0;
   border-width: 20px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 53, ../sass/02-elements/_triangles.scss */
+.loaded .tri--left--20 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--right--20 {
   border-right: none;
   border-left: 20px solid #e36b2d;
   border-top: 20px solid transparent !important;
   border-bottom: 20px solid transparent !important;
+  -moz-transform: rotate3d(0, 1, 0, 90deg);
+  -ms-transform: rotate3d(0, 1, 0, 90deg);
+  -webkit-transform: rotate3d(0, 1, 0, 90deg);
+  transform: rotate3d(0, 1, 0, 90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 20px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 39, ../sass/02-elements/_triangles.scss */
+.loaded .tri--right--20 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--up--20 {
   border-right: 20px solid transparent !important;
   border-left: 20px solid transparent !important;
   border-bottom: 20px solid #e36b2d;
   border-top: none;
+  -moz-transform: rotate3d(1, 0, 0, -90deg);
+  -ms-transform: rotate3d(1, 0, 0, -90deg);
+  -webkit-transform: rotate3d(1, 0, 0, -90deg);
+  transform: rotate3d(1, 0, 0, -90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 20px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 26, ../sass/02-elements/_triangles.scss */
+.loaded .tri--up--20 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--down--20 {
   border-right: 20px solid transparent !important;
   border-left: 20px solid transparent !important;
   border-top: 20px solid #e36b2d;
   border-bottom: none;
+  -moz-transform: rotate3d(1, 0, 0, 90deg);
+  -ms-transform: rotate3d(1, 0, 0, 90deg);
+  -webkit-transform: rotate3d(1, 0, 0, 90deg);
+  transform: rotate3d(1, 0, 0, 90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 20px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 13, ../sass/02-elements/_triangles.scss */
+.loaded .tri--down--20 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--left--30 {
   border-right: 30px solid #e36b2d;
   border-left: none;
   border-top: 30px solid transparent !important;
   border-bottom: 30px solid transparent !important;
+  -moz-transform: rotate3d(0, 1, 0, -90deg);
+  -ms-transform: rotate3d(0, 1, 0, -90deg);
+  -webkit-transform: rotate3d(0, 1, 0, -90deg);
+  transform: rotate3d(0, 1, 0, -90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 40px 0;
+  -ms-transform-origin: 40px 0;
+  -webkit-transform-origin: 40px 0;
+  transform-origin: 40px 0;
   border-width: 30px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 53, ../sass/02-elements/_triangles.scss */
+.loaded .tri--left--30 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--right--30 {
   border-right: none;
   border-left: 30px solid #e36b2d;
   border-top: 30px solid transparent !important;
   border-bottom: 30px solid transparent !important;
+  -moz-transform: rotate3d(0, 1, 0, 90deg);
+  -ms-transform: rotate3d(0, 1, 0, 90deg);
+  -webkit-transform: rotate3d(0, 1, 0, 90deg);
+  transform: rotate3d(0, 1, 0, 90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 30px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 39, ../sass/02-elements/_triangles.scss */
+.loaded .tri--right--30 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--up--30 {
   border-right: 30px solid transparent !important;
   border-left: 30px solid transparent !important;
   border-bottom: 30px solid #e36b2d;
   border-top: none;
+  -moz-transform: rotate3d(1, 0, 0, -90deg);
+  -ms-transform: rotate3d(1, 0, 0, -90deg);
+  -webkit-transform: rotate3d(1, 0, 0, -90deg);
+  transform: rotate3d(1, 0, 0, -90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 30px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 26, ../sass/02-elements/_triangles.scss */
+.loaded .tri--up--30 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--down--30 {
   border-right: 30px solid transparent !important;
   border-left: 30px solid transparent !important;
   border-top: 30px solid #e36b2d;
   border-bottom: none;
+  -moz-transform: rotate3d(1, 0, 0, 90deg);
+  -ms-transform: rotate3d(1, 0, 0, 90deg);
+  -webkit-transform: rotate3d(1, 0, 0, 90deg);
+  transform: rotate3d(1, 0, 0, 90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 30px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 13, ../sass/02-elements/_triangles.scss */
+.loaded .tri--down--30 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--left--40 {
   border-right: 40px solid #e36b2d;
   border-left: none;
   border-top: 40px solid transparent !important;
   border-bottom: 40px solid transparent !important;
+  -moz-transform: rotate3d(0, 1, 0, -90deg);
+  -ms-transform: rotate3d(0, 1, 0, -90deg);
+  -webkit-transform: rotate3d(0, 1, 0, -90deg);
+  transform: rotate3d(0, 1, 0, -90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 40px 0;
+  -ms-transform-origin: 40px 0;
+  -webkit-transform-origin: 40px 0;
+  transform-origin: 40px 0;
   border-width: 40px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 53, ../sass/02-elements/_triangles.scss */
+.loaded .tri--left--40 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--right--40 {
   border-right: none;
   border-left: 40px solid #e36b2d;
   border-top: 40px solid transparent !important;
   border-bottom: 40px solid transparent !important;
+  -moz-transform: rotate3d(0, 1, 0, 90deg);
+  -ms-transform: rotate3d(0, 1, 0, 90deg);
+  -webkit-transform: rotate3d(0, 1, 0, 90deg);
+  transform: rotate3d(0, 1, 0, 90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 40px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 39, ../sass/02-elements/_triangles.scss */
+.loaded .tri--right--40 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--up--40 {
   border-right: 40px solid transparent !important;
   border-left: 40px solid transparent !important;
   border-bottom: 40px solid #e36b2d;
   border-top: none;
+  -moz-transform: rotate3d(1, 0, 0, -90deg);
+  -ms-transform: rotate3d(1, 0, 0, -90deg);
+  -webkit-transform: rotate3d(1, 0, 0, -90deg);
+  transform: rotate3d(1, 0, 0, -90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 40px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 26, ../sass/02-elements/_triangles.scss */
+.loaded .tri--up--40 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--down--40 {
   border-right: 40px solid transparent !important;
   border-left: 40px solid transparent !important;
   border-top: 40px solid #e36b2d;
   border-bottom: none;
+  -moz-transform: rotate3d(1, 0, 0, 90deg);
+  -ms-transform: rotate3d(1, 0, 0, 90deg);
+  -webkit-transform: rotate3d(1, 0, 0, 90deg);
+  transform: rotate3d(1, 0, 0, 90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 40px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 13, ../sass/02-elements/_triangles.scss */
+.loaded .tri--down--40 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--left--50 {
   border-right: 50px solid #e36b2d;
   border-left: none;
   border-top: 50px solid transparent !important;
   border-bottom: 50px solid transparent !important;
+  -moz-transform: rotate3d(0, 1, 0, -90deg);
+  -ms-transform: rotate3d(0, 1, 0, -90deg);
+  -webkit-transform: rotate3d(0, 1, 0, -90deg);
+  transform: rotate3d(0, 1, 0, -90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 40px 0;
+  -ms-transform-origin: 40px 0;
+  -webkit-transform-origin: 40px 0;
+  transform-origin: 40px 0;
   border-width: 50px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 53, ../sass/02-elements/_triangles.scss */
+.loaded .tri--left--50 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--right--50 {
   border-right: none;
   border-left: 50px solid #e36b2d;
   border-top: 50px solid transparent !important;
   border-bottom: 50px solid transparent !important;
+  -moz-transform: rotate3d(0, 1, 0, 90deg);
+  -ms-transform: rotate3d(0, 1, 0, 90deg);
+  -webkit-transform: rotate3d(0, 1, 0, 90deg);
+  transform: rotate3d(0, 1, 0, 90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 50px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 39, ../sass/02-elements/_triangles.scss */
+.loaded .tri--right--50 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--up--50 {
   border-right: 50px solid transparent !important;
   border-left: 50px solid transparent !important;
   border-bottom: 50px solid #e36b2d;
   border-top: none;
+  -moz-transform: rotate3d(1, 0, 0, -90deg);
+  -ms-transform: rotate3d(1, 0, 0, -90deg);
+  -webkit-transform: rotate3d(1, 0, 0, -90deg);
+  transform: rotate3d(1, 0, 0, -90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 50px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 26, ../sass/02-elements/_triangles.scss */
+.loaded .tri--up--50 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--down--50 {
   border-right: 50px solid transparent !important;
   border-left: 50px solid transparent !important;
   border-top: 50px solid #e36b2d;
   border-bottom: none;
+  -moz-transform: rotate3d(1, 0, 0, 90deg);
+  -ms-transform: rotate3d(1, 0, 0, 90deg);
+  -webkit-transform: rotate3d(1, 0, 0, 90deg);
+  transform: rotate3d(1, 0, 0, 90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 50px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 13, ../sass/02-elements/_triangles.scss */
+.loaded .tri--down--50 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--left--60 {
   border-right: 60px solid #e36b2d;
   border-left: none;
   border-top: 60px solid transparent !important;
   border-bottom: 60px solid transparent !important;
+  -moz-transform: rotate3d(0, 1, 0, -90deg);
+  -ms-transform: rotate3d(0, 1, 0, -90deg);
+  -webkit-transform: rotate3d(0, 1, 0, -90deg);
+  transform: rotate3d(0, 1, 0, -90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 40px 0;
+  -ms-transform-origin: 40px 0;
+  -webkit-transform-origin: 40px 0;
+  transform-origin: 40px 0;
   border-width: 60px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 53, ../sass/02-elements/_triangles.scss */
+.loaded .tri--left--60 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--right--60 {
   border-right: none;
   border-left: 60px solid #e36b2d;
   border-top: 60px solid transparent !important;
   border-bottom: 60px solid transparent !important;
+  -moz-transform: rotate3d(0, 1, 0, 90deg);
+  -ms-transform: rotate3d(0, 1, 0, 90deg);
+  -webkit-transform: rotate3d(0, 1, 0, 90deg);
+  transform: rotate3d(0, 1, 0, 90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 60px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 39, ../sass/02-elements/_triangles.scss */
+.loaded .tri--right--60 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--up--60 {
   border-right: 60px solid transparent !important;
   border-left: 60px solid transparent !important;
   border-bottom: 60px solid #e36b2d;
   border-top: none;
+  -moz-transform: rotate3d(1, 0, 0, -90deg);
+  -ms-transform: rotate3d(1, 0, 0, -90deg);
+  -webkit-transform: rotate3d(1, 0, 0, -90deg);
+  transform: rotate3d(1, 0, 0, -90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 60px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 26, ../sass/02-elements/_triangles.scss */
+.loaded .tri--up--60 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--down--60 {
   border-right: 60px solid transparent !important;
   border-left: 60px solid transparent !important;
   border-top: 60px solid #e36b2d;
   border-bottom: none;
+  -moz-transform: rotate3d(1, 0, 0, 90deg);
+  -ms-transform: rotate3d(1, 0, 0, 90deg);
+  -webkit-transform: rotate3d(1, 0, 0, 90deg);
+  transform: rotate3d(1, 0, 0, 90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 60px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 13, ../sass/02-elements/_triangles.scss */
+.loaded .tri--down--60 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--left--70 {
   border-right: 70px solid #e36b2d;
   border-left: none;
   border-top: 70px solid transparent !important;
   border-bottom: 70px solid transparent !important;
+  -moz-transform: rotate3d(0, 1, 0, -90deg);
+  -ms-transform: rotate3d(0, 1, 0, -90deg);
+  -webkit-transform: rotate3d(0, 1, 0, -90deg);
+  transform: rotate3d(0, 1, 0, -90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 40px 0;
+  -ms-transform-origin: 40px 0;
+  -webkit-transform-origin: 40px 0;
+  transform-origin: 40px 0;
   border-width: 70px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 53, ../sass/02-elements/_triangles.scss */
+.loaded .tri--left--70 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--right--70 {
   border-right: none;
   border-left: 70px solid #e36b2d;
   border-top: 70px solid transparent !important;
   border-bottom: 70px solid transparent !important;
+  -moz-transform: rotate3d(0, 1, 0, 90deg);
+  -ms-transform: rotate3d(0, 1, 0, 90deg);
+  -webkit-transform: rotate3d(0, 1, 0, 90deg);
+  transform: rotate3d(0, 1, 0, 90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 70px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 39, ../sass/02-elements/_triangles.scss */
+.loaded .tri--right--70 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--up--70 {
   border-right: 70px solid transparent !important;
   border-left: 70px solid transparent !important;
   border-bottom: 70px solid #e36b2d;
   border-top: none;
+  -moz-transform: rotate3d(1, 0, 0, -90deg);
+  -ms-transform: rotate3d(1, 0, 0, -90deg);
+  -webkit-transform: rotate3d(1, 0, 0, -90deg);
+  transform: rotate3d(1, 0, 0, -90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 70px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 26, ../sass/02-elements/_triangles.scss */
+.loaded .tri--up--70 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--down--70 {
   border-right: 70px solid transparent !important;
   border-left: 70px solid transparent !important;
   border-top: 70px solid #e36b2d;
   border-bottom: none;
+  -moz-transform: rotate3d(1, 0, 0, 90deg);
+  -ms-transform: rotate3d(1, 0, 0, 90deg);
+  -webkit-transform: rotate3d(1, 0, 0, 90deg);
+  transform: rotate3d(1, 0, 0, 90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 70px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 13, ../sass/02-elements/_triangles.scss */
+.loaded .tri--down--70 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--left--80 {
   border-right: 80px solid #e36b2d;
   border-left: none;
   border-top: 80px solid transparent !important;
   border-bottom: 80px solid transparent !important;
+  -moz-transform: rotate3d(0, 1, 0, -90deg);
+  -ms-transform: rotate3d(0, 1, 0, -90deg);
+  -webkit-transform: rotate3d(0, 1, 0, -90deg);
+  transform: rotate3d(0, 1, 0, -90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 40px 0;
+  -ms-transform-origin: 40px 0;
+  -webkit-transform-origin: 40px 0;
+  transform-origin: 40px 0;
   border-width: 80px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 53, ../sass/02-elements/_triangles.scss */
+.loaded .tri--left--80 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--right--80 {
   border-right: none;
   border-left: 80px solid #e36b2d;
   border-top: 80px solid transparent !important;
   border-bottom: 80px solid transparent !important;
+  -moz-transform: rotate3d(0, 1, 0, 90deg);
+  -ms-transform: rotate3d(0, 1, 0, 90deg);
+  -webkit-transform: rotate3d(0, 1, 0, 90deg);
+  transform: rotate3d(0, 1, 0, 90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 80px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 39, ../sass/02-elements/_triangles.scss */
+.loaded .tri--right--80 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--up--80 {
   border-right: 80px solid transparent !important;
   border-left: 80px solid transparent !important;
   border-bottom: 80px solid #e36b2d;
   border-top: none;
+  -moz-transform: rotate3d(1, 0, 0, -90deg);
+  -ms-transform: rotate3d(1, 0, 0, -90deg);
+  -webkit-transform: rotate3d(1, 0, 0, -90deg);
+  transform: rotate3d(1, 0, 0, -90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 80px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 26, ../sass/02-elements/_triangles.scss */
+.loaded .tri--up--80 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--down--80 {
   border-right: 80px solid transparent !important;
   border-left: 80px solid transparent !important;
   border-top: 80px solid #e36b2d;
   border-bottom: none;
+  -moz-transform: rotate3d(1, 0, 0, 90deg);
+  -ms-transform: rotate3d(1, 0, 0, 90deg);
+  -webkit-transform: rotate3d(1, 0, 0, 90deg);
+  transform: rotate3d(1, 0, 0, 90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 80px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 13, ../sass/02-elements/_triangles.scss */
+.loaded .tri--down--80 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--left--90 {
   border-right: 90px solid #e36b2d;
   border-left: none;
   border-top: 90px solid transparent !important;
   border-bottom: 90px solid transparent !important;
+  -moz-transform: rotate3d(0, 1, 0, -90deg);
+  -ms-transform: rotate3d(0, 1, 0, -90deg);
+  -webkit-transform: rotate3d(0, 1, 0, -90deg);
+  transform: rotate3d(0, 1, 0, -90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 40px 0;
+  -ms-transform-origin: 40px 0;
+  -webkit-transform-origin: 40px 0;
+  transform-origin: 40px 0;
   border-width: 90px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 53, ../sass/02-elements/_triangles.scss */
+.loaded .tri--left--90 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--right--90 {
   border-right: none;
   border-left: 90px solid #e36b2d;
   border-top: 90px solid transparent !important;
   border-bottom: 90px solid transparent !important;
+  -moz-transform: rotate3d(0, 1, 0, 90deg);
+  -ms-transform: rotate3d(0, 1, 0, 90deg);
+  -webkit-transform: rotate3d(0, 1, 0, 90deg);
+  transform: rotate3d(0, 1, 0, 90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 90px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 39, ../sass/02-elements/_triangles.scss */
+.loaded .tri--right--90 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--up--90 {
   border-right: 90px solid transparent !important;
   border-left: 90px solid transparent !important;
   border-bottom: 90px solid #e36b2d;
   border-top: none;
+  -moz-transform: rotate3d(1, 0, 0, -90deg);
+  -ms-transform: rotate3d(1, 0, 0, -90deg);
+  -webkit-transform: rotate3d(1, 0, 0, -90deg);
+  transform: rotate3d(1, 0, 0, -90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 90px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 26, ../sass/02-elements/_triangles.scss */
+.loaded .tri--up--90 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--down--90 {
   border-right: 90px solid transparent !important;
   border-left: 90px solid transparent !important;
   border-top: 90px solid #e36b2d;
   border-bottom: none;
+  -moz-transform: rotate3d(1, 0, 0, 90deg);
+  -ms-transform: rotate3d(1, 0, 0, 90deg);
+  -webkit-transform: rotate3d(1, 0, 0, 90deg);
+  transform: rotate3d(1, 0, 0, 90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 90px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 13, ../sass/02-elements/_triangles.scss */
+.loaded .tri--down--90 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--left--100 {
   border-right: 100px solid #e36b2d;
   border-left: none;
   border-top: 100px solid transparent !important;
   border-bottom: 100px solid transparent !important;
+  -moz-transform: rotate3d(0, 1, 0, -90deg);
+  -ms-transform: rotate3d(0, 1, 0, -90deg);
+  -webkit-transform: rotate3d(0, 1, 0, -90deg);
+  transform: rotate3d(0, 1, 0, -90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 40px 0;
+  -ms-transform-origin: 40px 0;
+  -webkit-transform-origin: 40px 0;
+  transform-origin: 40px 0;
   border-width: 100px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 53, ../sass/02-elements/_triangles.scss */
+.loaded .tri--left--100 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--right--100 {
   border-right: none;
   border-left: 100px solid #e36b2d;
   border-top: 100px solid transparent !important;
   border-bottom: 100px solid transparent !important;
+  -moz-transform: rotate3d(0, 1, 0, 90deg);
+  -ms-transform: rotate3d(0, 1, 0, 90deg);
+  -webkit-transform: rotate3d(0, 1, 0, 90deg);
+  transform: rotate3d(0, 1, 0, 90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 100px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 39, ../sass/02-elements/_triangles.scss */
+.loaded .tri--right--100 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--up--100 {
   border-right: 100px solid transparent !important;
   border-left: 100px solid transparent !important;
   border-bottom: 100px solid #e36b2d;
   border-top: none;
+  -moz-transform: rotate3d(1, 0, 0, -90deg);
+  -ms-transform: rotate3d(1, 0, 0, -90deg);
+  -webkit-transform: rotate3d(1, 0, 0, -90deg);
+  transform: rotate3d(1, 0, 0, -90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 100px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 26, ../sass/02-elements/_triangles.scss */
+.loaded .tri--up--100 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 41, ../sass/02-elements/_triangles.scss */
+/* line 70, ../sass/02-elements/_triangles.scss */
 .tri--down--100 {
   border-right: 100px solid transparent !important;
   border-left: 100px solid transparent !important;
   border-top: 100px solid #e36b2d;
   border-bottom: none;
+  -moz-transform: rotate3d(1, 0, 0, 90deg);
+  -ms-transform: rotate3d(1, 0, 0, 90deg);
+  -webkit-transform: rotate3d(1, 0, 0, 90deg);
+  transform: rotate3d(1, 0, 0, 90deg);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
   border-width: 100px;
   height: 0;
   width: 0;
   display: block;
   content: ' ';
 }
+/* line 13, ../sass/02-elements/_triangles.scss */
+.loaded .tri--down--100 {
+  -moz-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
 
-/* line 46, ../sass/02-elements/_triangles.scss */
+/* line 75, ../sass/02-elements/_triangles.scss */
 .triangles {
   position: fixed;
   z-index: 20;
   display: none;
 }
-/* line 50, ../sass/02-elements/_triangles.scss */
+/* line 79, ../sass/02-elements/_triangles.scss */
 .admin-bar .triangles {
   top: 32px;
 }
 @media only screen and (min-width: 48em) {
-  /* line 46, ../sass/02-elements/_triangles.scss */
+  /* line 75, ../sass/02-elements/_triangles.scss */
   .triangles {
     display: block;
   }
 }
 
-/* line 57, ../sass/02-elements/_triangles.scss */
+/* line 86, ../sass/02-elements/_triangles.scss */
 .triangles--topleft {
   left: 0;
   top: 0px;
 }
 
-/* line 61, ../sass/02-elements/_triangles.scss */
+/* line 90, ../sass/02-elements/_triangles.scss */
 .tri--red {
   border-color: red;
 }
 
-/* line 64, ../sass/02-elements/_triangles.scss */
+/* line 93, ../sass/02-elements/_triangles.scss */
 .tri--grey3 {
   border-color: #383838;
 }
 
-/* line 67, ../sass/02-elements/_triangles.scss */
+/* line 96, ../sass/02-elements/_triangles.scss */
 .tri--grey5 {
   border-color: #58585b;
 }
 
-/* line 70, ../sass/02-elements/_triangles.scss */
+/* line 99, ../sass/02-elements/_triangles.scss */
 .triangles--topleft > div {
   position: absolute;
   bottom: 0;
 }
 
-/* line 74, ../sass/02-elements/_triangles.scss */
+/* line 103, ../sass/02-elements/_triangles.scss */
 .ttl-01 {
   top: 0;
   left: 5px;
+  -moz-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+  border-color: #333333;
+}
+
+/* line 109, ../sass/02-elements/_triangles.scss */
+.ttl-02 {
+  left: 0;
+  top: 5px;
+  border-color: #4d4d4d;
   -moz-transition-delay: 0.4s;
   -o-transition-delay: 0.4s;
   -webkit-transition-delay: 0.4s;
   transition-delay: 0.4s;
 }
 
-/* line 79, ../sass/02-elements/_triangles.scss */
-.ttl-02 {
-  left: 0;
-  top: 5px;
-  border-color: #3b3b3b;
-}
-
-/* line 84, ../sass/02-elements/_triangles.scss */
+/* line 115, ../sass/02-elements/_triangles.scss */
 .ttl-03 {
   left: 50px;
   top: 5px;
+  -moz-transition-delay: 0.6s;
+  -o-transition-delay: 0.6s;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
 }
 
-/* line 88, ../sass/02-elements/_triangles.scss */
+/* line 121, ../sass/02-elements/_triangles.scss */
 .ttl-04 {
   left: 90px;
   top: 5px;
+  -moz-transition-delay: 0.6s;
+  -o-transition-delay: 0.6s;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
 }
 
-/* line 92, ../sass/02-elements/_triangles.scss */
+/* line 126, ../sass/02-elements/_triangles.scss */
 .ttl-05 {
   left: 45px;
   top: 50px;
-  border-color: #5b5b5b;
+  border-color: #666666;
+  -moz-transition-delay: 0.8s;
+  -o-transition-delay: 0.8s;
+  -webkit-transition-delay: 0.8s;
+  transition-delay: 0.8s;
 }
 
-/* line 97, ../sass/02-elements/_triangles.scss */
+/* line 132, ../sass/02-elements/_triangles.scss */
 .ttl-06 {
   left: 0;
   top: 95px;
+  border-color: gray;
+  -moz-transition-delay: 1s;
+  -o-transition-delay: 1s;
+  -webkit-transition-delay: 1s;
+  transition-delay: 1s;
 }
 
-/* line 101, ../sass/02-elements/_triangles.scss */
+/* line 138, ../sass/02-elements/_triangles.scss */
 .ttl-07 {
   left: 0;
   top: 145px;
+  border-color: #999999;
+  -moz-transition-delay: 1.2s;
+  -o-transition-delay: 1.2s;
+  -webkit-transition-delay: 1.2s;
+  transition-delay: 1.2s;
 }
 
-/* line 105, ../sass/02-elements/_triangles.scss */
+/* line 144, ../sass/02-elements/_triangles.scss */
 .ttl-08 {
   left: 0;
   top: 195px;
+  border-color: #b3b3b3;
+  -moz-transition-delay: 1.4s;
+  -o-transition-delay: 1.4s;
+  -webkit-transition-delay: 1.4s;
+  transition-delay: 1.4s;
 }
 
 /* line 1, ../sass/03-templates/_archive.scss */
@@ -796,29 +1803,35 @@ p {
 .excerpt {
   padding: 20px;
   box-sizing: border-box;
-  max-height: 213px;
   overflow: hidden;
 }
-/* line 30, ../sass/03-templates/_archive.scss */
+/* line 29, ../sass/03-templates/_archive.scss */
 .excerpt h2 {
   color: #231F20;
   margin: 0;
 }
-/* line 34, ../sass/03-templates/_archive.scss */
+/* line 33, ../sass/03-templates/_archive.scss */
 .excerpt p {
   color: #231F20;
   font-family: "Ropa Sans", sans-serif;
   font-size: 18px;
 }
+@media only screen and (min-width: 48em) {
+  /* line 25, ../sass/03-templates/_archive.scss */
+  .excerpt {
+    max-height: 213px;
+  }
+}
 
-/* line 40, ../sass/03-templates/_archive.scss */
-.archive-block {
+/* line 42, ../sass/03-templates/_archive.scss */
+.content .archive-block {
   background: #808285;
+  margin-bottom: 40px;
 }
 
 /* line 1, ../sass/04-layout/_grid.scss */
 .wrapper {
-  margin: 80px 5px;
+  margin: 56px 5px;
 }
 
 /* line 4, ../sass/04-layout/_grid.scss */
@@ -833,8 +1846,14 @@ p {
   max-width: 984px;
   margin: 56px auto 0;
 }
+@media only screen and (min-width: 48em) {
+  /* line 1, ../sass/04-layout/_content.scss */
+  .content {
+    padding: 40px 60px 0;
+  }
+}
 
-/* line 5, ../sass/04-layout/_content.scss */
+/* line 8, ../sass/04-layout/_content.scss */
 .isBlock {
   display: block;
   max-width: 984px;

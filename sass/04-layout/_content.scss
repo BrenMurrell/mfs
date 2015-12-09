@@ -1,6 +1,9 @@
 .content {
     max-width: $dim-max-width;
     margin:56px auto 0;
+    @include respond(md) {
+        padding: 40px 60px 0;
+    }
 }
 .isBlock {
     display: block;

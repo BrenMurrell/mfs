@@ -6,24 +6,53 @@
             border-left: $size solid transparent !important;
             border-top: $size solid $color;
             border-bottom: none;
+            @include transform(rotate3d(1,0,0,90deg));
+            @include transition-property(transform);
+            @include transition-duration(0.4s);
+            @include transform-origin(0,0);
+            .loaded & {
+                @include transform(rotate3d(0,0,0,0deg));
+            }
         }
         @if $direction == up {
             border-right: $size solid transparent !important;
             border-left: $size solid transparent !important;
             border-bottom: $size solid $color;
             border-top: none;
+            @include transform(rotate3d(1,0,0,-90deg));
+            @include transition-property(transform);
+            @include transition-duration(0.4s);
+            @include transform-origin(0,0);
+            .loaded & {
+                @include transform(rotate3d(0,0,0,0deg));
+            }
         }
         @if $direction == right {
             border-right: none;
             border-left: $size solid $color;
             border-top: $size solid transparent !important;
             border-bottom: $size solid transparent !important;
+            @include transform(rotate3d(0,1,0,90deg));
+            @include transition-property(transform);
+            @include transition-duration(0.4s);
+            @include transform-origin(0,0);
+            .loaded & {
+                @include transform(rotate3d(0,0,0,0deg));
+            }
         }
+
         @if $direction == left {
             border-right: $size solid $color;
             border-left: none;
             border-top: $size solid transparent !important;
             border-bottom: $size solid transparent !important;
+            @include transform(rotate3d(0,1,0,-90deg));
+            @include transition-property(transform);
+            @include transition-duration(0.4s);
+            @include transform-origin(40px,0);
+            .loaded & {
+                @include transform(rotate3d(0,0,0,0deg));
+            }
         }
         border-width: $size;
         height: 0;
@@ -74,35 +103,47 @@ $class-slug: tri !default;
 .ttl-01 {
     top: 0;
     left: 5px;
-    @include transition-delay(0.4s);
+    @include transition-delay(0.2s);
+    border-color: lighten(#000000,20%);
 }
 .ttl-02 {
     left: 0;
     top: 5px;
-    border-color: #3b3b3b;
+    border-color: lighten(#000000,30%);
+    @include transition-delay(0.4s);
 }
 .ttl-03 {
     left: 50px;
     top: 5px;
+    @include transition-delay(0.6s);
+
 }
 .ttl-04 {
     left: 90px;
     top: 5px;
+    @include transition-delay(0.6s);
 }
 .ttl-05 {
     left: 45px;
     top: 50px;
-    border-color: #5b5b5b;
+    border-color: lighten(#000000,40%);
+    @include transition-delay(0.8s);
 }
 .ttl-06 {
     left: 0;
     top: 95px;
+    border-color: lighten(#000000,50%);
+    @include transition-delay(1.0s);
 }
 .ttl-07 {
     left: 0;
     top: 145px;
+    border-color: lighten(#000000,60%);
+    @include transition-delay(1.2s);
 }
 .ttl-08 {
     left: 0;
     top: 195px;
+    border-color: lighten(#000000,70%);
+    @include transition-delay(1.4s);
 }

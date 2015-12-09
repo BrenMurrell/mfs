@@ -15,10 +15,11 @@ h3 {
 
 /* line 14, ../sass/01-atoms/_typography.scss */
 h4 {
+  font-size: 1.2em;
   line-height: 1.4em;
 }
 
-/* line 17, ../sass/01-atoms/_typography.scss */
+/* line 18, ../sass/01-atoms/_typography.scss */
 p {
   font-family: "Josefin Slab", serif;
   font-size: 1.2em;
@@ -156,8 +157,8 @@ p {
 }
 /* line 63, ../sass/02-elements/_nav.scss */
 .nav--main ul:before {
-  border-top: 220px solid rgba(255, 185, 99, 0.6);
-  border-right: 220px solid rgba(255, 185, 99, 0.6);
+  border-top: 220px solid rgba(255, 185, 99, 0.9);
+  border-right: 220px solid rgba(255, 185, 99, 0.9);
   border-bottom: 220px solid transparent;
   border-left: 220px solid transparent;
   content: ' ';
@@ -181,16 +182,27 @@ p {
 }
 
 /* line 89, ../sass/02-elements/_nav.scss */
+.subtitle {
+  display: none;
+}
+@media only screen and (min-width: 48em) {
+  /* line 89, ../sass/02-elements/_nav.scss */
+  .subtitle {
+    display: inline-block;
+  }
+}
+
+/* line 95, ../sass/02-elements/_nav.scss */
 .navigation {
   overflow: hidden;
 }
 
-/* line 92, ../sass/02-elements/_nav.scss */
+/* line 98, ../sass/02-elements/_nav.scss */
 .newer {
   float: right;
 }
 
-/* line 95, ../sass/02-elements/_nav.scss */
+/* line 101, ../sass/02-elements/_nav.scss */
 .older {
   float: left;
 }

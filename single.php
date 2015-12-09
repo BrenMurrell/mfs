@@ -9,14 +9,16 @@
             $url_sm = $thumb_sm['0'];
             echo $url;
         ?>
-        <div class="hero" style="background-image: url('<?php echo $url_lg; ?>')">
-            <div class="overlay"></div>
-            <div class="hero-content">
-                <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-                <h3><?php echo get_post_meta($post->ID,'introtext',true); ?></h3>
-                <h4 class="meta"><?php the_author_meta('nickname'); ?> | <?php the_date(); ?></h4>
+        <?php if($url_lg) : ?>
+            <div class="hero" style="background-image: url('<?php echo $url_lg; ?>')">
+                <div class="overlay"></div>
+                <div class="hero-content">
+                    <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+                    <h3><?php echo get_post_meta($post->ID,'introtext',true); ?></h3>
+                    <h4 class="meta"><?php the_author_meta('nickname'); ?> | <?php the_date(); ?></h4>
+                </div>
             </div>
-        </div>
+        <?php endif; ?>
         <div class="content">
 
 

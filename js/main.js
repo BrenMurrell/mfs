@@ -9,3 +9,6 @@ $(function () {
 $(window).load(function() {
     $('body').addClass('loaded');
 });
+$(window).resize(function() {
+    $('.hero').height(innerHeight - 96);
+});

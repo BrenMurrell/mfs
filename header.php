@@ -26,7 +26,7 @@
 	<nav class="nav--main">
 		<h1><a href="<?php bloginfo('wpurl'); ?>"><?php echo get_bloginfo('name'); ?></a></h1>
 		<?php if(!is_home()): ?>
-			<h2>&nbsp;> <?php the_title(); ?></h2>
+			<h2 class="subtitle">&nbsp;> <?php the_title(); ?></h2>
 		<?php endif; ?>
 		<a class="fa fa-bars" href="#"></a>
 		<ul>

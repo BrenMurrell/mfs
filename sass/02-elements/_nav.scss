@@ -61,8 +61,8 @@
         }
 
         &:before {
-            border-top: 220px solid rgba(255, 185, 99, 0.6);
-            border-right: 220px solid rgba(255, 185, 99, 0.6);
+            border-top: 220px solid rgba(255, 185, 99, 0.9);
+            border-right: 220px solid rgba(255, 185, 99, 0.9);
             border-bottom: 220px solid transparent;
             border-left: 220px solid transparent;
             content: ' ';
@@ -84,6 +84,12 @@
                 color: $col-orange;
             }
         }
+    }
+}
+.subtitle {
+    display: none;
+    @include respond(md) {
+        display: inline-block;
     }
 }
 .navigation {

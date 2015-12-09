@@ -1,7 +1,7 @@
 .content {
     max-width: $dim-max-width;
     margin:56px auto 0;
-    padding: 5px 0 0 0;
+    padding: 10px 10px 0 10px;
     @include respond(md) {
         padding: 40px 60px 0;
     }

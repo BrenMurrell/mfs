@@ -9,12 +9,27 @@
     color: #fff;
     text-shadow: 0 0 5px rgba(0,0,0,0.4);
     position: relative;
+    h1, h3, h4 { margin: 0em 0 0.5em 0;}
+    h4 {
+        margin-top: 2em;
+    }
     h1 a {
         color: #fff;
         text-transform: uppercase;
     }
     @include respond(md) {
         padding: 40px 0 0 136px;
+        &:before {
+            display: block;
+            position: absolute;
+            width: 90px;
+            background: white;
+            content: ' ';
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 19;
+        }
     }
 }
 .overlay {

@@ -6,6 +6,7 @@ a {
 /* line 6, ../sass/01-atoms/_typography.scss */
 h1, h2, h3, h4 {
   font-family: 'Ropa Sans', sans-serif;
+  font-weight: 500;
 }
 
 /* line 11, ../sass/01-atoms/_typography.scss */
@@ -40,6 +41,14 @@ p {
   position: relative;
 }
 /* line 12, ../sass/02-elements/_hero.scss */
+.hero h1, .hero h3, .hero h4 {
+  margin: 0em 0 0.5em 0;
+}
+/* line 13, ../sass/02-elements/_hero.scss */
+.hero h4 {
+  margin-top: 2em;
+}
+/* line 16, ../sass/02-elements/_hero.scss */
 .hero h1 a {
   color: #fff;
   text-transform: uppercase;
@@ -49,9 +58,21 @@ p {
   .hero {
     padding: 40px 0 0 136px;
   }
+  /* line 22, ../sass/02-elements/_hero.scss */
+  .hero:before {
+    display: block;
+    position: absolute;
+    width: 90px;
+    background: white;
+    content: ' ';
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 19;
+  }
 }
 
-/* line 20, ../sass/02-elements/_hero.scss */
+/* line 35, ../sass/02-elements/_hero.scss */
 .overlay {
   background: rgba(0, 0, 0, 0.2);
   position: absolute;
@@ -61,7 +82,7 @@ p {
   width: 100%;
 }
 
-/* line 28, ../sass/02-elements/_hero.scss */
+/* line 43, ../sass/02-elements/_hero.scss */
 .hero-content {
   position: relative;
 }
@@ -1850,7 +1871,7 @@ p {
 
 /* line 1, ../sass/04-layout/_grid.scss */
 .wrapper {
-  margin: 56px 5px;
+  margin: 56px 0px;
 }
 
 /* line 4, ../sass/04-layout/_grid.scss */
@@ -1864,7 +1885,7 @@ p {
 .content {
   max-width: 984px;
   margin: 56px auto 0;
-  padding: 5px 0 0 0;
+  padding: 10px 10px 0 10px;
 }
 @media only screen and (min-width: 48em) {
   /* line 1, ../sass/04-layout/_content.scss */

@@ -1,12 +1,14 @@
 .fi {
     background-position: center center;
     background-size: cover;
-    height: 428px;
+
+    height: 288px;
     width: 100%;
     //display: none;
-    //@include respond(md) {
-    //    display: block;
-    //}
+    @include respond(md) {
+        //display: block;
+        height: 428px;
+    }
 }
 .fi--zoom {
     height: 214px;
@@ -19,12 +21,13 @@
     }
     @include respond(md) {
         display: block;
+        height: 214px;
     }
 }
 
 .excerpt {
     padding: 20px;
-    box-sizing: border-box;    
+    box-sizing: border-box;
     overflow: hidden;
     h2 {
         color: $col-headings;

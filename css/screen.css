@@ -1781,11 +1781,17 @@ p {
 .fi {
   background-position: center center;
   background-size: cover;
-  height: 428px;
+  height: 288px;
   width: 100%;
 }
+@media only screen and (min-width: 48em) {
+  /* line 1, ../sass/03-templates/_archive.scss */
+  .fi {
+    height: 428px;
+  }
+}
 
-/* line 11, ../sass/03-templates/_archive.scss */
+/* line 13, ../sass/03-templates/_archive.scss */
 .fi--zoom {
   height: 214px;
   display: none;
@@ -1800,42 +1806,43 @@ p {
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
 }
-/* line 17, ../sass/03-templates/_archive.scss */
+/* line 19, ../sass/03-templates/_archive.scss */
 .archive-block .pure-u-md-1-3:hover .fi--zoom {
   -webkit-filter: grayscale(0%);
 }
 @media only screen and (min-width: 48em) {
-  /* line 11, ../sass/03-templates/_archive.scss */
+  /* line 13, ../sass/03-templates/_archive.scss */
   .fi--zoom {
     display: block;
+    height: 214px;
   }
 }
 
-/* line 25, ../sass/03-templates/_archive.scss */
+/* line 28, ../sass/03-templates/_archive.scss */
 .excerpt {
   padding: 20px;
   box-sizing: border-box;
   overflow: hidden;
 }
-/* line 29, ../sass/03-templates/_archive.scss */
+/* line 32, ../sass/03-templates/_archive.scss */
 .excerpt h2 {
   color: #231F20;
   margin: 0;
 }
-/* line 33, ../sass/03-templates/_archive.scss */
+/* line 36, ../sass/03-templates/_archive.scss */
 .excerpt p {
   color: #231F20;
   font-family: "Ropa Sans", sans-serif;
   font-size: 18px;
 }
 @media only screen and (min-width: 48em) {
-  /* line 25, ../sass/03-templates/_archive.scss */
+  /* line 28, ../sass/03-templates/_archive.scss */
   .excerpt {
     max-height: 213px;
   }
 }
 
-/* line 42, ../sass/03-templates/_archive.scss */
+/* line 45, ../sass/03-templates/_archive.scss */
 .content .archive-block {
   background: #808285;
   margin-bottom: 40px;
@@ -1857,6 +1864,7 @@ p {
 .content {
   max-width: 984px;
   margin: 56px auto 0;
+  padding: 5px 0 0 0;
 }
 @media only screen and (min-width: 48em) {
   /* line 1, ../sass/04-layout/_content.scss */
@@ -1865,7 +1873,7 @@ p {
   }
 }
 
-/* line 8, ../sass/04-layout/_content.scss */
+/* line 9, ../sass/04-layout/_content.scss */
 .isBlock {
   display: block;
   max-width: 984px;

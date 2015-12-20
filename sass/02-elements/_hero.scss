@@ -30,6 +30,17 @@
             left: 0;
             z-index: 19;
         }
+        &:after {
+            position: absolute;
+            bottom: 0;
+            left: 90px;
+            border-bottom: 220px solid $col-transparent-orange;
+            border-left: 220px solid $col-transparent-orange;
+            border-top: 220px solid transparent;
+            border-right: 220px solid transparent;
+            content: " ";
+            z-index: 19;
+        }
     }
 }
 .overlay {
@@ -42,4 +53,8 @@
 }
 .hero-content {
     position: relative;
+    z-index:20;
+    @include respond(md) {
+        padding-right: 200px;
+    }
 }

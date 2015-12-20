@@ -1,0 +1,22 @@
+label {
+    display: block;
+    //font-family: $font-sans;
+}
+input, textarea {
+    background-color: rgba(0,0,0,0.1);
+    max-width: 600px;
+    width: 100%;
+    border: 1px solid #a9a9a9;
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    border: none;
+    font-family: $font-sans;
+    background-color: $col-orange;
+    padding: 0.5em 1em;
+    width: auto;
+    &:hover {
+        color: #fff;
+    }
+}

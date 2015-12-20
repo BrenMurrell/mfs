@@ -24,9 +24,13 @@
 </head>
 <body <?php body_class(); ?>>
 	<nav class="nav--main">
-		<h1><a href="<?php bloginfo('wpurl'); ?>"><?php echo get_bloginfo('name'); ?></a></h1>
 		<?php if(!is_home()): ?>
-			<h2 class="subtitle">&nbsp;> <?php the_title(); ?></h2>
+			<h1><a href="<?php bloginfo('wpurl'); ?>"><?php echo get_bloginfo('name'); ?></a></h1>
+			<?php if(is_tag()) : ?>
+				<h2 class="subtitle">&nbsp;> <?php echo strtoupper(get_query_var( "tag" )); ?></h2>
+			<?php elseif(!is_home()): ?>
+				<h2 class="subtitle">&nbsp;> <?php the_title(); ?></h2>
+			<?php endif; ?>
 		<?php endif; ?>
 		<a class="fa fa-bars" href="#"></a>
 		<ul>

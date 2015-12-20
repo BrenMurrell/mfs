@@ -1,0 +1,10 @@
+.gallery-item {
+    @include respondmf(sm) {
+        width: 50% !important;
+        clear: none;
+        img {
+            width: 90%;
+            height: auto;
+        }
+    }
+}

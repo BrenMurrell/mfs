@@ -1,30 +1,7 @@
 <?php get_header(); ?>
-
-
-<?php
-    $thisPageID = get_option('page_for_posts');
-    //$thisPageID = mog_get_outside_id();
-    $thumb_lg = wp_get_attachment_image_src( get_post_thumbnail_id($thisPageID), 'sz-large' );
-    $url_lg = $thumb_lg['0'];
-    $thumb_sm = wp_get_attachment_image_src( get_post_thumbnail_id($thisPageID), 'post-thumbnail' );
-    $url_sm = $thumb_sm['0'];
-
-?>
-
-
-
-<div class="hero" style="background-image: url('<?php echo $url_lg; ?>')">
-    <div class="overlay"></div>
-    <div class="hero-content">
-        <h1>MOTHER f<br/>STEWART<br/>2016 - NOW</h1>
-        <h3><?php //echo get_post_meta($post->ID,'introtext',true); ?></h3>
-    </div>
-</div>
-
-
-<?php if ( have_posts() ) : ?>
-
-    <div class="content">
+<div class="content">
+    <h2><?php echo strtoupper(get_query_var( "tag" )); ?>'S POSTS</h2>
+    <?php if ( have_posts() ) : ?>
         <?php while ( have_posts() ) : the_post(); ?>
             <?php
                 $thumb_lg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'sz-large' );
@@ -59,7 +36,9 @@
             </a>
         <?php endwhile; ?>
         <div class="navigation"><p><?php posts_nav_link('&nbsp;','<span class="newer">Newer posts &raquo;</span>', '<span class="older">&laquo; Older posts</span>'); ?></p></div>
-    </div>
-<?php endif; ?>
+    <?php else: ?>
+        <p>No posts found!</p>
+    <?php endif; ?>
+</div>
 
 <?php get_footer(); ?>
